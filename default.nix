@@ -33,11 +33,23 @@ stdenv.mkDerivation {
         ucs
         catchfilebetweentags
 
+        xifthen
+        ifnextok
+        currfile
         noindentafter
         ifmtarg
         scheme-medium
         listings
+        minted
+        microtype
         babel
+        todonotes
+        chngcntr
+        ifplatform
+        xstring
+        minifp
+        titlecaps
+        enumitem
         l3packages
         ;
       })
