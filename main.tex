@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DOCUMENT PREAMBLE %%%
+\documentclass[12pt]{report}
+\usepackage[english]{babel}
+%\usepackage{natbib}
+\usepackage{url}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{1}								
+% Title
+\author{Guilherme Horta Alvares da Silva}						
+% Author
+\date{15 de Abril de 2019}
+% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+   % \includegraphics[scale = 0.075]{bsulogo.png}\\[1.0 cm]	% University Logo
+\begin{center}    \textsc{\Large   Mathematical Sciences}\\[2.0 cm]	\end{center}% University Name
+	\textsc{\Large Individual Report  }\\[0.5 cm]				% Course Code
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+		%	\emph{Submitted To:}\\
+		%	Name\\
+          % Affiliation\\
+           %contact info\\
+			\end{flushleft}
+			\end{minipage}~
+			\begin{minipage}{0.4\textwidth}
+            
+			\begin{flushright} \large
+			\emph{Submitted By :} \\
+			Guilherme Horta  
+		\end{flushright}
+           
+	\end{minipage}\\[2 cm]
+	
+	\includegraphics[scale = 0.5]{PICMathLogo.png}
+    
+    
+    
+    
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesection}{\arabic{section}}
+\section{Introdução}
+
+Desde Novembro de 2008, o valor de mercado mundial do bitcoin chegou a 330 bilhões (em 17 de dezembro de 2018). O preço do bitcoin chegou a ter seu recorde histórico por volta de 20 mil dólares. Outras cripto-moedas também foram criadas e elas também possuem um bom valor de mercado. Cripto-moedas se tornaram instrumentos financeiros e serão as principais moedas em um futuro próximo.
+
+Cripto-moedas também são utilizadas com contratos inteligentes. Um exemplo seria o comprador reservar uma parte do dinheiro para o vendedor na blockchain. Para o dinheiro ser liberado, o vendedor deve receber uma assinatura do comprador. O comprador irá fornecer a assinatura se o produto dele chegar. Se o produto não chegar a tempo, o comprador recebe seu dinheiro de volta. Contratos inteligentes são utilizados hoje em dia por grandes fundos, no qual as relações de contratos são integralmente governada por algoritmos (sem nenhuma interferência governamental).
+
+\section{Modelando bitcoin em Agda}
+
+Já que cripto-moedas são governadas integralmente por algoritmos. Precisamos garantir que esses algoritmos estejam corretos, já que em caso de falhar, não existe nada que podemos fazer. O único jeito de resolver problemas é criando um consenso entre usuários e mineradores, criando um soft fork (retro compatível) ou um hard fork. A possibilidade de erro é um dos mais importantes riscos nas cripto-moedas. Por exemplo, no protocolo inicial do bitcoin, a unicidade dos IDs das transações não era garantido. Com isso, era possível que houvesse ataques de gasto duplo. Isso pode ser consertado incluindo o número do bloco na transação (foi feito em um soft fork). O tamanho do bloco do bitcoin não é suficiente para cobrir todas as transações. Para resolver isso, foi criada a Light Network, que é um protocolo de segunda camada do bitcoin.
+
+Por isso, é importante a verificação completa dos protocolos criptográficos. Um alto nível de verificação pode ser encontrado criando um método formal para cripto-moedas e provando que está correto. Ainda não existe nenhum método completamente formal para a formalização de alguma cripto-moeda.
+
+O crescimento de contratos inteligentes criou alguns problemas em relação a segurança de instrumentos financeiros. O maior incidente foi a falha do DAO. Quando o DAO chegou a um valor de 150 milhões de dólares, um usuário usou uma vulnerabilidade para hackear o contrato. A perda do dinheiro dos investidores foi somente evitada por causa de um hard fork na rede ethereum, no qual deletou a maioria das transações investidas no DAO. Esse hard fork violou o principio que o dinheiro dos usuários em cripto-moedas devem ser apenas governados por algoritmos, sem nenhuma interferência humana. Por isso, existe a necessidade de provas formais, que provam sua corretude, que serve como certificado.
+
+\newpage
+\section{Acknowledgments}
+
+ PIC Math is a program of the Mathematical Association of America (MAA) and the Society for Industrial and Applied Mathematics (SIAM). Support is provided by the National Science Foundation (NSF grant DMS-1345499).
+\newpage
+ 
+\begin{thebibliography}{111}
+
+\bibitem{Agda Compiler}
+    Andreas Abel, 
+    {\it Stephan Adelsberger, and Anton Setzer. ooAgda. Agda Library, 2016. 
+    \url{https://github.com/agda/ooAgda}}
+    
+\bibitem{Agda Documentation}
+    Andreas Abel, Stephan Adelsberger, and Anton Setzer. ooAgda. Agda Library, 2016. 
+    \url{https://github.com/agda/ooAgda}
+
+\bibitem{Agda Wiki}
+    Agda Wiki.  The Agda Wiki, 2017.  
+    \url{http://wiki.portal.chalmers.se/agda/pmwiki.php}
+    
+\bibitem{Bitcoin whitepaper}
+    Satoshi Nakamoto.  
+    {\it Bitcoin:  A peer-to-peer electronic cash system, 1 November 2008.Announced on the cryptography mailing list. \url{http://www.bitcoin.org/bitcoin.pdf}}
+
+\bibitem{Bitcoin whitepaper2}
+    Satoshi Nakamoto.  
+    {\it Satoshi Nakamoto.  Bitcoin:  A peer-to-peer electronic cash system, 1 November 2008.Announced on the cryptography mailing list. \url{http://www.bitcoin.org/bitcoin.pdf}}
+
+\bibitem{Modelling Bitcoin in Agda}
+    Anton Setzer.  
+    {\it ept. of Computer Science, Swansea University, Singleton Park, Swansea SA28PP, UK}
+
+\end{thebibliography}
+\end{document}
+
+%This template was created by Roza Aceska.
