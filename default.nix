@@ -76,5 +76,6 @@ stdenv.mkDerivation {
         l3packages
         ;
       })
+    haskellPackages.Agda
   ];
 }

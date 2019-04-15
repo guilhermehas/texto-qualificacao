@@ -1,6 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% DOCUMENT PREAMBLE %%%
 \documentclass[12pt]{report}
+
+\usepackage{agda}
+\usepackage{catchfilebetweentags}
+
 \usepackage[english]{babel}
 %\usepackage{natbib}
 \usepackage{url}
@@ -40,8 +44,8 @@
 	\centering
     \vspace*{0.5 cm}
    % \includegraphics[scale = 0.075]{bsulogo.png}\\[1.0 cm]	% University Logo
-\begin{center}    \textsc{\Large   Mathematical Sciences}\\[2.0 cm]	\end{center}% University Name
-	\textsc{\Large Individual Report  }\\[0.5 cm]				% Course Code
+   \begin{center}    \textsc{\Large   Fundação Getúlio Vargas}\\[2.0 cm]	\end{center}% University Name
+   \textsc{\Large Modelagem Matemática  }\\[0.5 cm]				% Course Code
 	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
 	{ \huge \bfseries \thetitle}\\
 	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
@@ -57,8 +61,8 @@
 			\begin{minipage}{0.4\textwidth}
             
 			\begin{flushright} \large
-			\emph{Submitted By :} \\
-			Guilherme Horta  
+        \emph{Feito por:} \\
+      Guilherme Horta 
 		\end{flushright}
            
 	\end{minipage}\\[2 cm]
@@ -92,10 +96,34 @@ Por isso, é importante a verificação completa dos protocolos criptográficos.
 
 O crescimento de contratos inteligentes criou alguns problemas em relação a segurança de instrumentos financeiros. O maior incidente foi a falha do DAO. Quando o DAO chegou a um valor de 150 milhões de dólares, um usuário usou uma vulnerabilidade para hackear o contrato. A perda do dinheiro dos investidores foi somente evitada por causa de um hard fork na rede ethereum, no qual deletou a maioria das transações investidas no DAO. Esse hard fork violou o principio que o dinheiro dos usuários em cripto-moedas devem ser apenas governados por algoritmos, sem nenhuma interferência humana. Por isso, existe a necessidade de provas formais, que provam sua corretude, que serve como certificado.
 
+\section{Introdução a Agda}
+
+Para garantir a corretude de um programa, precisamos de demonstrações formais ou técnicas de model checking. Idealmente, deveriamos ser capazes de especificar e programar em uma mesma linguagem. Agda é uma linguagem que permite isso.
+
+Agda é um provador de teoremas baseado na teoria de tipos de Martin-Lof. Ele está muito relacionado ao provador de teoremas Coq. Além do mais, Agda é uma linguagem total, o que é garantido que ela sempre termina (não existe loop infinito). Sem isso, Agda seria uma linguagem inconsistente. Agda já está em sua segunda versão. Ela foi criada na tese de doutorado de Ulf Norell. Depois disso, ela foi aprimorada por sua comunidade.
+
+Para definirmos booleans, temos:
+
+\ExecuteMetaData[latex/Code.tex]{bool}
+
+Para definir os números naturais de acordo com os axiomas de peano, usamos:
+
+\ExecuteMetaData[latex/Code.tex]{nat}
+
+No caso dos naturais, temos uma função sucessor. Para cada número natural, essa função retorna outro número natural.
+
+Para definirmos soma, usamos a definição recursiva
+
+\ExecuteMetaData[latex/Code.tex]{plus}
+
+Em uma lista, existe dois construtores. Um que fornece a lista vazia e outro, que dado um elemento e outra lista, ele fornece uma nova lista.
+
+\ExecuteMetaData[latex/Code.tex]{listdef}
+
+
 \newpage
 \section{Acknowledgments}
 
- PIC Math is a program of the Mathematical Association of America (MAA) and the Society for Industrial and Applied Mathematics (SIAM). Support is provided by the National Science Foundation (NSF grant DMS-1345499).
 \newpage
  
 \begin{thebibliography}{111}
@@ -127,5 +155,3 @@ O crescimento de contratos inteligentes criou alguns problemas em relação a se
 
 \end{thebibliography}
 \end{document}
-
-%This template was created by Roza Aceska.

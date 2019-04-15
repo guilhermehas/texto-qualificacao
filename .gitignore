@@ -1,0 +1,11 @@
+*.agdai
+*.pdf
+*.log
+*.aux
+*latexmk
+*.toc
+*.fls
+*.ptb
+result
+agda.sty
+latex
