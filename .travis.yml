@@ -1,8 +1,4 @@
 language: nix
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: $out
-  on:
-    branch: master
+before_install:
+  - nix-channel --add https://nixos.org/channels/nixos-18.09 nixpkgs
+  - nix-channel --update
