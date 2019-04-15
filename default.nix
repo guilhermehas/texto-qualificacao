@@ -18,11 +18,8 @@ stdenv.mkDerivation {
         blindtext
         substr
 
-        # babel
         url
-        # inputec
         amsmath
-        # graphicx
         parskip
         fancyhdr
         vmargin
@@ -36,43 +33,11 @@ stdenv.mkDerivation {
         ucs
         catchfilebetweentags
 
-        fvextra
-        framed
-        newtx
-        nowidow
-        emptypage
-        wrapfig
-        subfigure
-        adjustbox
-        collectbox
-        tikz-cd
-        imakeidx
-        idxlayout
-        subfiles
-        lettrine
-        upquote
-        libertine
-        mweights
-        fontaxes
-        mdframed
-        needspace
-        xifthen
-        ifnextok
-        currfile
         noindentafter
         ifmtarg
         scheme-medium
         listings
-        minted
-        microtype
         babel
-        todonotes
-        chngcntr
-        ifplatform
-        xstring
-        minifp
-        titlecaps
-        enumitem
         l3packages
         ;
       })

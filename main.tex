@@ -67,7 +67,7 @@
            
 	\end{minipage}\\[2 cm]
 	
-	\includegraphics[scale = 0.5]{PICMathLogo.png}
+  \includegraphics[scale = 0.5]{PICMathLogo.png}
     
     
     
@@ -88,7 +88,7 @@ Desde Novembro de 2008, o valor de mercado mundial do bitcoin chegou a 330 bilh�
 
 Cripto-moedas também são utilizadas com contratos inteligentes. Um exemplo seria o comprador reservar uma parte do dinheiro para o vendedor na blockchain. Para o dinheiro ser liberado, o vendedor deve receber uma assinatura do comprador. O comprador irá fornecer a assinatura se o produto dele chegar. Se o produto não chegar a tempo, o comprador recebe seu dinheiro de volta. Contratos inteligentes são utilizados hoje em dia por grandes fundos, no qual as relações de contratos são integralmente governada por algoritmos (sem nenhuma interferência governamental).
 
-\section{Modelando bitcoin em Agda}
+\section{O bitcoin}
 
 Já que cripto-moedas são governadas integralmente por algoritmos. Precisamos garantir que esses algoritmos estejam corretos, já que em caso de falhar, não existe nada que podemos fazer. O único jeito de resolver problemas é criando um consenso entre usuários e mineradores, criando um soft fork (retro compatível) ou um hard fork. A possibilidade de erro é um dos mais importantes riscos nas cripto-moedas. Por exemplo, no protocolo inicial do bitcoin, a unicidade dos IDs das transações não era garantido. Com isso, era possível que houvesse ataques de gasto duplo. Isso pode ser consertado incluindo o número do bloco na transação (foi feito em um soft fork). O tamanho do bloco do bitcoin não é suficiente para cobrir todas as transações. Para resolver isso, foi criada a Light Network, que é um protocolo de segunda camada do bitcoin.
 
@@ -102,7 +102,7 @@ Para garantir a corretude de um programa, precisamos de demonstrações formais 
 
 Agda é um provador de teoremas baseado na teoria de tipos de Martin-Lof. Ele está muito relacionado ao provador de teoremas Coq. Além do mais, Agda é uma linguagem total, o que é garantido que ela sempre termina (não existe loop infinito). Sem isso, Agda seria uma linguagem inconsistente. Agda já está em sua segunda versão. Ela foi criada na tese de doutorado de Ulf Norell. Depois disso, ela foi aprimorada por sua comunidade.
 
-Para definirmos booleans, temos:
+Para definir-se booleans:
 
 \ExecuteMetaData[latex/Code.tex]{bool}
 
@@ -120,6 +120,23 @@ Em uma lista, existe dois construtores. Um que fornece a lista vazia e outro, qu
 
 \ExecuteMetaData[latex/Code.tex]{listdef}
 
+Para descobrir o tamanho da lista:
+
+\ExecuteMetaData[latex/Code.tex]{length}
+
+Um tipo é dependente se ele depende de algum valor. Um exemplo disso é um vetor indexado de seu tamanho:
+
+\ExecuteMetaData[latex/Code.tex]{vector}
+
+Nesse caso, Vec A n é um vetor de elementos do tipo A com n elementos.
+
+Uma vantagem por exemplo de usar tipo de vetor, é que é possível criar uma função que retorna o primeiro elemento desse vetor de forma segura.
+
+\ExecuteMetaData[latex/Code.tex]{vectorhead}
+
+\section{Modelando o Bitcoin em Agda}
+
+\includegraphics[scale = 0.5]{utxo}
 
 \newpage
 \section{Acknowledgments}

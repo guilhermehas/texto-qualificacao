@@ -100,7 +100,6 @@ data Maybe (A : Set) : Set where
 \end{code}
 %</maybe>
 
-
 \begin{code}
 infix 4 _≡_
 data _≡_ {a} {A : Set a} (x : A) : A → Set a where
