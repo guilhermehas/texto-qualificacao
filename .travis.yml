@@ -7,9 +7,9 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  email: guilhermehas@hotmail.com
   keep_history: true
-  repo: pdf-qualification
+  repo: $GITHUB_REPO
   local_dir: result
+  target_branch: master
   on:
     branch: master
