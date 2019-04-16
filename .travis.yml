@@ -9,5 +9,6 @@ deploy:
   github_token: $GITHUB_TOKEN
   keep_history: true
   repo: gh_pages
+  local_dir: $out
   on:
     branch: master
