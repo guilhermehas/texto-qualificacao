@@ -98,9 +98,9 @@ a partir de um soft fork (retro compatível) ou um hard fork.
 A possibilidade de erro é um dos maiores riscos às cripto-moedas.
 Por exemplo, no protocolo inicial do bitcoin, a unicidade dos IDs das transações não era garantida.
 Com isso, era possível que houvesse ataques de gasto duplo.
-Isso pode ser consertado incluindo o número do bloco na transação (foi feito em um soft fork).
+Isso pôde ser consertado incluindo o número do bloco na transação (foi feito em um soft fork).
 Outro problema do bitcoin é que o tamanho do bloco do bitcoin não é suficiente para cobrir todas as transações.
-Para resolver isso, foi criada a Light Network, que é um protocolo de segunda camada do bitcoin.
+Para resolver isso, foi criada a Lightning Network, que é um protocolo de segunda camada do bitcoin.
 
 Por isso, é importante a verificação completa dos protocolos criptográficos.
 Um alto nível de verificação pode ser encontrado criando um método formal para cripto-moedas e provando que ele está correto.
@@ -178,7 +178,7 @@ No paper de Anton Setzer, a modelagem da estrutura de dados do UTXO está quase 
 
 \section{Blockchain em Agda}
 
-A estrutura de dados blockchain significa cadeia de blocos. Existem dois tipos de blocos, o primeiro bloco (genesis block) e os outros. Cada bloco, possui um link para o bloco anterior (exceto o primeiro). Esse link é o hash do bloco anterior. Dessa forma, é possível sempre garantir a ordem dos blocos. Cada bloco armazena transações, o hash do bloco anterior, o nounce e o seu próprio hash. Cada bloco precisa ser minerado, ou seja, o minerador precisa calcular o valor do nounce (que é preciso de muito poder computacional).
+A estrutura de dados blockchain significa cadeia de blocos. Existem dois tipos de blocos, o primeiro bloco (genesis block) e os outros. Cada bloco, possui um link para o bloco anterior (exceto o primeiro). Esse link é o hash do bloco anterior. Dessa forma, é possível sempre garantir a ordem dos blocos. Cada bloco armazena transações, o hash do bloco anterior, o nonce e o seu próprio hash. Cada bloco precisa ser minerado, ou seja, o minerador precisa calcular o valor do nonce (que requer muito poder computacional).
 
 Dessa forma, foi adicionado no código de Agda, a especificação de que o bloco deve conter o hash do bloco anterior, usando tipos dependentes. E a especificação do hash do bloco.
 
