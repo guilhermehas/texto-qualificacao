@@ -1,9 +1,11 @@
 { pkgs ? import <nixpkgs> {} }: with pkgs;
 
+let
+  agdapkg = (import agda/default.nix) {};
+in
 stdenv.mkDerivation {
   name = "qualificacao-mestrado";
   src = ./.;
-  # FONTCONFIG_FILE = makeFontsConf { fontDirectories = [ inconsolata-lgc libertine libertinus ]; };
   buildInputs = [
     (texlive.combine {
         inherit (texlive)
@@ -52,7 +54,9 @@ stdenv.mkDerivation {
         enumitem
         l3packages
         ;
+        simple-package = {
+          pkgs = [ agdapkg ];
+        };
       })
-    haskellPackages.Agda
   ];
 }

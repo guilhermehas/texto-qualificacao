@@ -1,8 +1,8 @@
 default: pdf
 
 pdf:
-	agda --latex Code.lagda
-	if [ ! -f agda.sty ]; then ln latex/agda.sty agda.sty; fi
+	# agda --latex Code.lagda
+	# if [ ! -f agda.sty ]; then ln latex/agda.sty agda.sty; fi
 	latexmk -pdf -use-make main.tex
 
 install: pdf
