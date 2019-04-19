@@ -3,10 +3,10 @@
 \documentclass[12pt]{article}
 
 \usepackage{agda}
+\usepackage{apacite}
 \usepackage{catchfilebetweentags}
 
 \usepackage[english]{babel}
-%\usepackage{natbib}
 \usepackage{url}
 \usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
@@ -84,9 +84,9 @@
 \renewcommand{\thesection}{\arabic{section}}
 \section{Introdução}
 
-O bitcoin foi a primeira criptomoeda criada em 2008 por Satoshi Nakamoto em sua publicação Bitcoin WhitePaper.
+O bitcoin \cite{nakamoto2008bitcoin} foi a primeira criptomoeda criada em 2008 por Satoshi Nakamoto em sua publicação Bitcoin WhitePaper.
 
-Desde Novembro de 2008, o valor de mercado mundial do bitcoin chegou a 330 bilhões de dólares (em 17 de dezembro de 2018). O preço do bitcoin chegou a ter seu recorde histórico por volta de 20 mil dólares. Outras cripto-moedas como Ethereum e Monero também foram criadas e elas também possuem um bom valor de mercado. Cripto-moedas se tornaram instrumentos financeiros e serão as principais moedas em um futuro próximo.
+Desde Novembro de 2008, o valor de mercado mundial do bitcoin chegou a 330 bilhões de dólares (em 17 de dezembro de 2018). O preço do bitcoin chegou a ter seu recorde histórico por volta de 20 mil dólares. Outras cripto-moedas como Ethereum \cite{wood2014ethereum} e Monero \cite{noether2015ring} também foram criadas e elas também possuem um bom valor de mercado. Cripto-moedas se tornaram instrumentos financeiros e serão as principais moedas em um futuro próximo.
 
 Cripto-moedas também são utilizadas por contratos inteligentes. Por exemplo, seria o comprador reservar uma parte do dinheiro para o vendedor na blockchain. Para o dinheiro ser liberado, o vendedor deve receber a assinatura do comprador. O comprador irá fornecer a assinatura se receber o produto. Se o produto não chegar a tempo, o comprador recebe seu dinheiro de volta. Contratos inteligentes são utilizados hoje em dia por grandes fundos, no qual as relações de contratos são integralmente governada por algoritmos (sem nenhuma interferência governamental).
 
@@ -121,7 +121,7 @@ Por isso, existe a necessidade de provas formais, que garantem sua corretude do 
 
 Para garantir a corretude de um programa, precisamos de demonstrações formais ou técnicas de model checking.
 Idealmente, deveria ser capazes de especificar e programar em uma mesma linguagem.
-Agda é uma linguagem que permite isso.
+Agda \cite{setzer2018modelling} é uma linguagem que permite isso.
 
 Agda é um provador de teoremas baseado na teoria de tipos de Martin-Lof.
 Ele está muito relacionado ao provador de teoremas Coq.
@@ -209,32 +209,7 @@ Agradeço o professor Flávio por me auxiliar em todas as minhas dúvidas sobre 
 
 \newpage
  
-\begin{thebibliography}{111}
+\bibliographystyle{apacite}
+\bibliography{References}
 
-\bibitem{Agda Compiler}
-    Andreas Abel, 
-    {\it Stephan Adelsberger, and Anton Setzer. ooAgda. Agda Library, 2016. 
-    \url{https://github.com/agda/ooAgda}}
-    
-\bibitem{Agda Documentation}
-    Andreas Abel, Stephan Adelsberger, and Anton Setzer. ooAgda. Agda Library, 2016. 
-    \url{https://github.com/agda/ooAgda}
-
-\bibitem{Agda Wiki}
-    Agda Wiki.  The Agda Wiki, 2017.  
-    \url{http://wiki.portal.chalmers.se/agda/pmwiki.php}
-    
-\bibitem{Bitcoin whitepaper}
-    Satoshi Nakamoto.  
-    {\it Bitcoin:  A peer-to-peer electronic cash system, 1 November 2008.Announced on the cryptography mailing list. \url{http://www.bitcoin.org/bitcoin.pdf}}
-
-\bibitem{Bitcoin whitepaper2}
-    Satoshi Nakamoto.  
-    {\it Satoshi Nakamoto.  Bitcoin:  A peer-to-peer electronic cash system, 1 November 2008.Announced on the cryptography mailing list. \url{http://www.bitcoin.org/bitcoin.pdf}}
-
-\bibitem{Modelling Bitcoin in Agda}
-Anton Setzer.  
-{\it ept. of Computer Science, Swansea University, Singleton Park, Swansea SA28PP, UK}
-
-\end{thebibliography}
 \end{document}

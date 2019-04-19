@@ -6,7 +6,8 @@
 *.toc
 *.fls
 *.ptb
+*.bbl
+*.blg
+
 *ignoregit*
 result
-agda.sty
-latex

@@ -26,6 +26,9 @@ stdenv.mkDerivation {
         fancyhdr
         vmargin
 
+        apacite
+        logreq
+        biblatex
         changepage
 
         polytable

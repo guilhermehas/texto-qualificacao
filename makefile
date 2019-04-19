@@ -1,7 +1,7 @@
 default: pdf
 
 pdf:
-	latexmk -pdf -use-make main.tex
+	latexmk -f -pdf -use-make main.tex
 
 install: pdf
 	mkdir -p $(out)
@@ -17,3 +17,5 @@ clean:
 	rm -f agda.sty; \
 	rm -rf latex; \
 	rm *.ptb; \
+	rm *.bbl; \
+	rm *.blg; \
